@@ -23,3 +23,29 @@ print("b 함수 :", b(stringArray))
 print("c(Int) 함수 :", c(intArray))
 print("c(String) 함수 :", c(stringArray))
 print("d 함수 :", d(intArray))
+
+// Introducible 배열 및 고유 메서드 실행
+var beings: [Introducible] = []
+
+let robot = Robot(name: "피규어")
+let cat = Cat(name: "나비")
+let dog = Dog(name: "초코")
+
+beings.append(robot)
+beings.append(cat)
+beings.append(dog)
+
+for being in beings {
+    print(being.introduce())
+
+    if let robot = being as? Robot {
+        robot.batteryCharge()
+    } else if let cat = being as? Cat {
+        cat.meow()
+    } else if let dog = being as? Dog {
+        dog.bark()
+    }
+}
+
+robot.name = "옵티머스"
+robot.name = "옵티머스"
