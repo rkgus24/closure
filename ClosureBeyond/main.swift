@@ -39,7 +39,7 @@ beings.append(dog)
 
 for being in beings {
     print(being.introduce())
-
+    
     if let robot = being as? Robot {
         robot.batteryCharge()
     } else if let cat = being as? Cat {
@@ -83,3 +83,21 @@ do {
 } catch {
     print("빈 주소 ", error)
 }
+
+
+let avante = Car(brand: "현대", model: "Avante", year: "2024", engine: CombustionEngine())
+avante.drive()
+avante.stop()
+print("----------------")
+
+let model3 = ElectricCar(brand: "테슬라", model: "Model 3", year: "2025")
+model3.drive()
+model3.stop()
+print("----------------")
+
+let miraiHybrid = HybridCar(brand: "기아", model: "K8-Hybrid", year: "2025", engine: HydrogenEngine())
+miraiHybrid.drive()
+miraiHybrid.stop()
+miraiHybrid.switchEngine(to: ElectricEngine())
+miraiHybrid.drive()
+miraiHybrid.stop()
