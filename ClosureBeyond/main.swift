@@ -101,3 +101,18 @@ miraiHybrid.stop()
 miraiHybrid.switchEngine(to: ElectricEngine())
 miraiHybrid.drive()
 miraiHybrid.stop()
+
+
+var intBox = SortableBox(items: [1, 10, 2, 9, 5])
+intBox.sortItems()
+print("정렬된 intBox:", intBox.items)
+
+var stringBox = SortableBox(items: ["Banana", "Apple", "Orange"])
+stringBox.sortItems()
+print("정렬된 stringBox:", stringBox.items)
+
+struct Person {
+    let name: String
+}
+
+let personBox = SortableBox(items: [Person(name: "?"), Person(name: "??")])
