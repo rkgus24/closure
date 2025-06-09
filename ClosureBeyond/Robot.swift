@@ -23,7 +23,7 @@ class Robot: Introducible {
     }
 
     func introduce() -> String {
-        return "안녕하세요, 저는 \(name)입니다."
+        return "로봇 \(name)이 작동을 시작합니다."
     }
 
     func batteryCharge() {

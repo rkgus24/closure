@@ -1,10 +1,3 @@
-//
-//  Car.swift
-//  ClosureBeyond
-//
-//  Created by 노가현 on 6/9/25.
-//
-
 import Foundation
 
 open class Car {
@@ -29,9 +22,5 @@ open class Car {
 
     open func stop() {
         print("\(brand) \(model) 정지")
-    }
-
-    open func refuelOrCharge() {
-        engine.recharge()
     }
 }

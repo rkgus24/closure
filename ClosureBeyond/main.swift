@@ -27,15 +27,12 @@ print("c(String) 함수 :", c(stringArray))
 print("d 함수 :", d(intArray))
 
 // 필수 문제 4
-var beings: [Introducible] = []
-
-let robot = Robot(name: "피규어")
-let cat = Cat(name: "나비")
-let dog = Dog(name: "초코")
-
-beings.append(robot)
-beings.append(cat)
-beings.append(dog)
+var beings: [Introducible] = [
+    
+    Robot(name: "피규어"),
+    Cat(name: "나비"),
+    Dog(name: "초코")
+]
 
 for being in beings {
     print(being.introduce())
@@ -49,8 +46,10 @@ for being in beings {
     }
 }
 
-robot.name = "옵티머스"
-robot.name = "옵티머스"
+if let robot = beings[0] as? Robot {
+    robot.name = "옵티머스"
+    robot.name = "옵티머스"
+}
 
 // 필수 문제 5
 let testAddress = "서울시 강남구"
@@ -116,3 +115,5 @@ struct Person {
 }
 
 let personBox = SortableBox(items: [Person(name: "?"), Person(name: "??")])
+
+main()
